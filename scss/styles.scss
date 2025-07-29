@@ -4,8 +4,70 @@
   box-sizing: border-box;
 }
 
+/* Mixins */
+@mixin video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+@mixin subtitulos {
+  border-radius: 30px;
+  border: solid 2px;
+  border-image: linear-gradient(to right, #fafafc, #070707) 1;
+  h2 {
+    color: whitesmoke;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@mixin contacto-boton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #25d366;
+  padding: 10px 15px;
+  border-radius: 50px;
+  text-decoration: none;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+  img.whatsapp-icon {
+    width: 40px;
+    height: auto;
+  }
+
+  p {
+    margin: 0;
+    font-size: 14px;
+    color: white;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+  }
+
+  &:hover {
+    transform: scale(1.4);
+    border-color: transparent;
+  }
+}
+
+/* Aplicación de estilos */
 #body {
-  font-family: poppins, sans-serif;
+  font-family: "Poppins", sans-serif;
   color: whitesmoke;
   text-align: center;
 }
@@ -18,21 +80,15 @@
   color: whitesmoke;
   text-decoration: none;
 }
+
 #nav-brand {
   color: whitesmoke;
 }
-@mixin video-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: -1;
-}
+
 .video-background {
   @include video-background;
 }
+
 #servicios {
   display: flex;
   flex-direction: column;
@@ -43,10 +99,27 @@
   background-color: #98a1bc;
   border-radius: 15px;
 }
+
 .carousel-item img.servicio {
   width: 100%;
   height: 400px;
   object-fit: cover;
+}
+
+.subtitulos {
+  @include subtitulos;
+  text-align: center;
+  margin: 20px 0;
+  transition: ease-in-out 0.3s;
+}
+
+.subtitulos:hover {
+  background: linear-gradient(to right, #fafafc, #070707);
+  border-color: transparent;
+}
+
+.button {
+  @include contacto-boton;
 }
 
 @media (min-width: 1440px) {
@@ -54,6 +127,7 @@
     width: 20%;
   }
 }
+
 @media (max-width: 768px) {
   .cliente-destacado {
     flex-direction: column;
@@ -64,8 +138,7 @@
   .cliente-destacado img {
     margin-bottom: 10px;
   }
-}
-@media (max-width: 768px) {
+
   .carousel-item img.servicio {
     height: 250px;
   }
