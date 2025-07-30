@@ -64,7 +64,18 @@
     border-color: transparent;
   }
 }
+@mixin hover {
+  border-radius: 20px;
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+  }
 
+  &:hover {
+    transform: scale(1.4);
+    border-color: transparent;
+  }
+}
 /* Aplicación de estilos */
 #body {
   font-family: "Poppins", sans-serif;
@@ -121,7 +132,44 @@
 .button {
   @include contacto-boton;
 }
+/* about_Us */
+.bloque {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 60px 0;
+  gap: 40px;
+  flex-wrap: wrap;
+}
 
+.bloque.izquierda {
+  flex-direction: row;
+}
+
+.bloque.derecha {
+  flex-direction: row-reverse;
+}
+
+.bloque .texto {
+  flex: 1;
+  min-width: 300px;
+  color: white;
+}
+
+.bloque .imagen {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.bloque .imagen img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 16px;
+  @include hover;
+}
+/* fin about_Us */
 @media (min-width: 1440px) {
   #logo {
     width: 20%;

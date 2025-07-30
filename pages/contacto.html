@@ -16,12 +16,19 @@
       content="Contactá a Fox Solutions para obtener asesoramiento en diseño web, desarrollo y marketing digital a la medida de tus necesidades."
     />
   </head>
-  <body>
+  <body id="body">
+    <header>
+      <video autoplay muted loop class="video-background">
+        <source src="/images/Fondo.mp4" type="video/mp4" />
+      </video>
+      <img src="/images/Fox Solutions Logo.png" alt="Logo de Fox Solutions" />
+      <h1>Soluciones simples, a situaciones digitales complejas</h1>
+    </header>
     <main>
       <!-- Agrego una barra de navegacion -->
-      <nav class="navbar">
+      <nav class="navbar .navbar-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Explora</a>
+          <a class="navbar-brand mx-auto" id="nav-brand" href="#">Explora</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -34,7 +41,7 @@
             <img src="/icons/menu-5_90930.svg" alt="icono" class="icono-nav" />
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div>
+            <div id="nav-link">
               <a class="nav-link" href="/pages/about_Us.html">Quienes somos</a>
               <a class="nav-link" href="/pages/clientes.html"
                 >Confian en nosotros</a
@@ -42,12 +49,21 @@
               <a class="nav-link" href="/pages/servicios.html"
                 >Nuestros servicios</a
               >
-              <a class="nav-link" href="/index.html">Inicio</a>
+              <a class="nav-link" href="/pages/contacto.html">Contacto</a>
             </div>
           </div>
         </div>
       </nav>
     </main>
+    <a href="/pages/contacto.html" class="button"
+      ><img src="/icons/whatsapp.png" alt="WhatsApp" class="whatsapp-icon" />
+    </a>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2023 Fox Solutions. Todos los derechos reservados.</p>
+      </div>
+    </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
