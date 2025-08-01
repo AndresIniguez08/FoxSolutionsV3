@@ -18,18 +18,20 @@
       content="Fox Solutions ofrece soluciones simples a situaciones digitales complejas. Descubre nuestros servicios de desarrollo web, consultoría digital y marketing en línea."
     />
   </head>
-  <body>
+  <body id="body">
     <header>
-      <h1>Fox Solutions</h1>
-      <p>Soluciones simples a situaciones digitales complejas.</p>
+      <video autoplay muted loop class="video-background">
+        <source src="/images/Fondo.mp4" type="video/mp4" />
+      </video>
       <img src="/images/Fox Solutions Logo.png" alt="Logo de Fox Solutions" />
+      <h1>Soluciones simples, a situaciones digitales complejas</h1>
     </header>
 
     <main>
       <!-- Agrego una barra de navegacion -->
-      <nav class="navbar">
+      <nav class="navbar .navbar-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Explora</a>
+          <a class="navbar-brand mx-auto" id="nav-brand" href="#">Explora</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -39,10 +41,10 @@
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <img src="/icons/menu-5_90930.svg" alt="icono" class="icono-nav" />
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div>
+            <div id="nav-link">
               <a class="nav-link" href="/pages/about_Us.html">Quienes somos</a>
               <a class="nav-link" href="/pages/clientes.html"
                 >Confian en nosotros</a
@@ -56,27 +58,103 @@
         </div>
       </nav>
     </main>
-    <section id="about">
-      <h2>Sobre nosotros</h2>
-      <p>
-        En Fox Solutions, ofrecemos soluciones simples a situaciones digitales
-        complejas.
-      </p>
+    <div class="subtitulos">
+      <h2>Servicios Destacados</h2>
+    </div>
+    <section class="container">
+      <!-- Carousel de servicios -->
+      <div id="servicios" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#servicios"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#servicios"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#servicios"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="/images/desarrollo-web-a-medida.png"
+              class="servicio"
+              alt="desarrollo web"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Desarrollo web</h5>
+              <p>Creación de sitios web personalizados y optimizados.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="/images/marketing digital.webp"
+              class="servicio"
+              alt="marketing digital"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="black">Marketing digital</h5>
+              <p class="black">
+                Estrategias efectivas para aumentar tu presencia en línea.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="/images/banner main.jpg"
+              class="servicio"
+              alt="asesoria IT"
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Consultoría IT</h5>
+              <p>
+                Asesoramiento experto para mejorar tus sistemas tecnológicos.
+              </p>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#servicios"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#servicios"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
     </section>
 
-    <section id="services">
-      <h2>Servicios</h2>
-      <ul>
-        <li>Desarrollo web</li>
-        <li>Consultoría digital</li>
-        <li>Marketing en línea</li>
-      </ul>
-    </section>
+    <a href="/pages/contacto.html" class="button"
+      ><img src="/icons/whatsapp.png" alt="WhatsApp" class="whatsapp-icon" />
+    </a>
 
-    <section id="contact">
-      <h2>Contacto</h2>
-      <p>Puedes contactarnos a través de nuestro correo electrónico:</p>
-    </section>
+    <footer>
+      <div class="container">
+        <p>&copy; 2023 Fox Solutions. Todos los derechos reservados.</p>
+      </div>
+    </footer>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
